@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tvIntro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_padding="10dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,5 +48,40 @@
                 android:id="@+id/pork"/>
         </LinearLayout>
     </RadioGroup>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheese"
+        android:id="@+id/chkCheese"
+        app:layout_constraintTop_toBottomOf="@+id/radioChoice"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Onion"
+        android:id="@+id/chkOnion"
+        app:layout_constraintTop_toBottomOf="@+id/chkCheese"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salad"
+        android:id="@+id/chkSalad"
+        app:layout_constraintTop_toBottomOf="@+id/chkOnion"
+        app:layout_constraintStart_toStartOf="parent"
+       />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chkSalad"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingLeft="30dp"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
