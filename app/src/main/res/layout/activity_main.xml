@@ -20,40 +20,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioChoice"
+        android:id="@+id/rgChoice"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tvIntro"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_padding="10dp"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        app:layout_constraintStart_toStartOf="parent">
+
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chicken"
-            android:id="@+id/chicken"/>
+            android:checked="true"
+            android:id="@+id/rbChicken"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Beef"
-            android:id="@+id/beef"/>
+            android:id="@+id/rbBeef"/>
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pork"
-                android:id="@+id/pork"/>
-        </LinearLayout>
+                android:id="@+id/rbPork"/>
+
     </RadioGroup>
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cheese"
         android:id="@+id/chkCheese"
-        app:layout_constraintTop_toBottomOf="@+id/radioChoice"
+        app:layout_constraintTop_toBottomOf="@+id/rgChoice"
         app:layout_constraintStart_toStartOf="parent"
         />
     <CheckBox
@@ -76,11 +73,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ORDER"
+        android:id="@+id/btnOrder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/chkSalad"
         app:layout_constraintStart_toStartOf="parent"
-        android:paddingLeft="30dp"
+        android:textAlignment="center"
         />
+
+    <TextView
+        android:id="@+id/tvOrder"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOrder"
+        android:inputType="textMultiLine"
+        android:textSize="25dp"/>
 
 
 
